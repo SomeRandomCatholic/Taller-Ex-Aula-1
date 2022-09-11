@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-    </head>
+<head>
 
-    <body>
-        
-    </body>
+    <!--Enlace a Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/Estilo personalizado.css">
+
+    <title>Comida típica de El Salvador</title>
+
+    <meta charset="UTF-8">
+    <meta name="keywords" content="comida,turismo,El Salvador,nacional,típico">
+    <meta name="description" content="Un Sitio Web dedicado a las comidas típicas de El Salvador">
+
+    <!--Canvas-->
+    <script>
+        function dibujaBandera(){
+            var ctx = document.getElementById ('canvas');
+            var contenido = ctx.getContext ('2d');
+                           
+            //Rectángulo superio
+            contenido.fillStyle = 'blue';
+            contenido.fillRect (0, 55, 400, 60);
+            
+            //Rectángulo intermedio
+            contenido.fillStyle = 'white';
+            contenido.fillRect (0, 115, 400, 50);
+            
+            //Rectángulo inferior
+            contenido.fillStyle = 'blue';
+            contenido.fillRect (0, 165, 400, 60);
+        }
+    </script>	
+</head>
+
+<body onload="dibujaBandera()">
+    <div class="container-fluid p-5 " id="fondo">
+       
+        <div class="container-md bg-light" id="contenedor">
+            <h1 class="text-center p-2 text-primary">¡Comidas típicas de El Salvador!</h1>
+
+            <div class="row">
+                <div class="col-md-9">
+                    <p class="m-2">En esta página, encontrarás información sobre las comidas típicas que caracterizan a El Salvador. ¡Bienvenido!</p>
+
+                    <img alt="Banner Volcán" src="../img/Banner.jpg" class="img-fluid" id="banner"> 
+
+                    <section>
+                        <article class="m-2 p-2">
+                            <h3 class="text-center text-dark">Las Imperdibles Pupusas</h3>
+                            <p>Escrito por <a href="https://github.com/MariaTorres0" target="_blank">María Torres</a></p>
+                            <p>La información irá aquí</p>
+                        </article>
+                    </section>
+                </div>
+                <aside class="col-md-3" >
+                    <canvas id="canvas" height="300"></canvas>
+                    <h2 class="text-info text-center">Sobre los Autores</h2>
+
+                    <div class=""></div>
+                    <div class=""></div>
+
+                </aside>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
