@@ -16,53 +16,136 @@
 
     <!--Canvas-->
     <script>
-        function dibujaBandera(){
-            var ctx = document.getElementById ('canvas');
-            var contenido = ctx.getContext ('2d');
-                           
+        function dibujaBandera() {
+            var ctx = document.getElementById('canvas');
+            var contenido = ctx.getContext('2d');
+
             //Rectángulo superio
             contenido.fillStyle = 'blue';
-            contenido.fillRect (0, 55, 400, 60);
-            
+            contenido.fillRect(0, 55, 400, 60);
+
             //Rectángulo intermedio
             contenido.fillStyle = 'white';
-            contenido.fillRect (0, 115, 400, 50);
-            
+            contenido.fillRect(0, 115, 400, 50);
+
             //Rectángulo inferior
             contenido.fillStyle = 'blue';
-            contenido.fillRect (0, 165, 400, 60);
+            contenido.fillRect(0, 165, 400, 60);
+
+            // Escudo de El Salvador
+            let imagen = document.getElementById("imagen");
+            contenido.drawImage(imagen, 125, 115, 50, 50);
+
         }
-    </script>	
+    </script>
 </head>
 
 <body onload="dibujaBandera()">
     <div class="container-fluid p-5 " id="fondo">
-       
-        <div class="container-md bg-light" id="contenedor">
-            <h1 class="text-center p-2 text-primary">¡Comidas típicas de El Salvador!</h1>
+
+        <div class="container-md bg-light p-3" id="contenedor">
+            <h1 class="text-center text-primary">¡Comidas típicas de El Salvador!</h1>
+            <br>
 
             <div class="row">
                 <div class="col-md-9">
-                    <p class="m-2">En esta página, encontrarás información sobre las comidas típicas que caracterizan a El Salvador. ¡Bienvenido!</p>
 
-                    <img alt="Banner Volcán" src="../img/Banner.jpg" class="img-fluid" id="banner"> 
+                    <img alt="Banner Volcán" src="../img/Banner.jpg" class="img-fluid" id="banner">
+                    <p class="p-3 lead">Nuestro país es un lugar mágico lleno de hermosos paisajes y ricas tradiciones. Y uno
+                        de sus atractivos es sin lugar a dudas su gastronomía. En esta página, encontrarás información
+                        sobre las comidas típicas que caracterizan a
+                        El Salvador. ¡Bienvenido!</p>
+
+                    <nav class="row ">
+                        <div class="col-xl">
+                            <button type="button" class="btn m-2 btn-primary ">
+                                <a href="#primera" class="text-light text-decoration-none">Primera publicación</a>
+                            </button>
+                        </div>
+                        <div class="col-xl text-end">
+                            <button type="button" class="btn m-2 btn-primary">
+                                <a href="#ultima" class="text-light text-decoration-none">Última publicación</a>
+                            </button>
+                        </div>
+                    </nav>
 
                     <section>
-                        <article class="m-2 p-2">
+                        <!-- Primera comida-->
+                        <article class="m-4 p-3">
+                            <h3 class="text-center text-dark" id="ultima">Las Imperdibles Pupusas</h3>
+                            <p>Publicado por <a href="https://github.com/MariaTorres0" target="_blank">María Torres</a>
+                            </p>
+                            <p>La información irá aquí</p>
+                        </article>
+
+                        <!-- Segunda comida-->
+                        <article class="m-4 p-3">
                             <h3 class="text-center text-dark">Las Imperdibles Pupusas</h3>
-                            <p>Escrito por <a href="https://github.com/MariaTorres0" target="_blank">María Torres</a></p>
+                            <p>Publicado por <a href="https://github.com/MariaTorres0" target="_blank">María Torres</a>
+                            </p>
+                            <p>La información irá aquí</p>
+                        </article>
+
+                        <!-- Tercera comida -->
+                        <article class="m-4 p-3">
+                            <h3 class="text-center text-dark">Las Imperdibles Pupusas</h3>
+                            <p>Publicado por <a href="https://github.com/MariaTorres0" target="_blank">María Torres</a>
+                            </p>
+                            <p>La información irá aquí</p>
+                        </article>
+
+                        <!-- Cuarta comida -->
+                        <article class="m-4 p-3">
+                            <h3 class="text-center text-dark">Las Imperdibles Pupusas</h3>
+                            <p>Publicado por <a href="https://github.com/MariaTorres0" target="_blank">María Torres</a>
+                            </p>
+                            <p>La información irá aquí</p>
+                        </article>
+
+                        <!-- Quinta comida -->
+                        <article class="m-4 p-3">
+                            <h3 class="text-center text-dark" id="primera">Las Imperdibles Pupusas</h3>
+                            <p>Publicado por <a href="https://github.com/MariaTorres0" target="_blank">María Torres</a>
+                            </p>
                             <p>La información irá aquí</p>
                         </article>
                     </section>
                 </div>
-                <aside class="col-md-3" >
-                    <canvas id="canvas" height="300"></canvas>
-                    <h2 class="text-info text-center">Sobre los Autores</h2>
 
-                    <div class=""></div>
-                    <div class=""></div>
+
+                <aside class="col-md-3">
+                    <canvas id="canvas" height="300"></canvas>
+                    <h2 class="text-success text-center">Sobre los Autores</h2>
+                    <img src="../img/Escudo_nacional.webp" width="50" height="50" id="imagen">
+
+                    <div class="bg-info perfiles p-3">
+                        <h3 class=" text-center text-white">Christopher Cruz</h3>
+                        <img src="../img/Chris.jpg" width="80%" class="p-2" alt="Foto de perfil Christopher"
+                            id="perfilChristopher">
+
+                        <p class="text-black">
+                            Programador Junior en Javascript, CSS y HTML, me gusta leer y ver películas. Actualmente
+                            estudio en la Universidad Don Bosco.
+                        </p>
+                        <a class="text-white" target="_blank" href="https://github.com/SomeRandomCatholic">Ver perfil de Github</a>
+
+                    </div>
+                    <br>
+                    <div class="bg-info perfiles p-3">
+                        <h3 class=" text-center text-white">María Torres</h3>
+                        <img src="../img/Chris.jpg" width="80%" class="p-2" alt="Foto de perfil Christopher"
+                            id="perfilChristopher">
+
+                        <p class="text-black">
+                            Programador Junior en Javascript, CSS y HTML, me gusta leer y ver películas. Actualmente
+                            estudio en la Universidad Don Bosco.
+                        </p>
+                        <a class="text-white" target="_blank" href="https://github.com/SomeRandomCatholic">Ver perfil de Github</a>
+
+                    </div>
 
                 </aside>
+
             </div>
         </div>
     </div>
